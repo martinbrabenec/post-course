@@ -1,29 +1,32 @@
 const calcTip = function (bill) {
-    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-}
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
 
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 
 const tips = [];
 
-const totals  = [];
+const totals = [];
 
-
-    // iterator
+// iterator
 for (let i = 0; i < bills.length; i++) {
-const tip = calcTip(bills[i]);
-tips.push(tip);
-totals.push(tip + bills[i]);
-// console.log(`Bill: ${bills[i]}, Tip: ${tip}, Total: ${bills[i] + tip}`);
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+  totals.push(tip + bills[i]);
+  // console.log(`Bill: ${bills[i]}, Tip: ${tip}, Total: ${bills[i] + tip}`);
 }
 
 console.log(bills, tips, totals);
 
 const calcAverage = function (xxx) {
-    let sum = 0;
-    for(let i = 0; i <xxx.length; i++) {
-        sum += xxx[i];
-    }
-    return sum / xxx.length;
-}
+  let sum = 0;
+  for (let i = 0; i < xxx.length; i++) {
+    sum += xxx[i];
+  }
+  return sum / xxx.length;
+};
 console.log(calcAverage([2, 3, 7]));
+
+("use strict");
+
+const x = 23;
